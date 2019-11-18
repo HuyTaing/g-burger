@@ -1,0 +1,40 @@
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  url('../../images/hero-bcg.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+
+  .hero-text {
+    text-align: center;
+    color: $mainWhite;
+
+    h1 {
+      font-size: 5rem;
+      letter-spacing: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size : 2rem;
+      font-family: 'caveat', sans-serif;
+    }
+
+    .hero-button {
+      background: transparent;
+      padding: 0.5rem 2rem;
+      border: 1px solid $mainWhite;
+      text-align: center;
+      color: $mainWhite;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+
+      &:hover {
+        background: $mainWhite;
+        color: $mainBlack;
+      }
+    }
+  }
+}

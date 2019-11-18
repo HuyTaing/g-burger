@@ -1,0 +1,22 @@
+footer {
+  background-color: $mainBlack;
+  color: $mainWhite;
+
+  .nav-social-links {
+    display: flex;
+    line-height: 0;
+    justify-content: center;
+
+    & a {
+    color: $primaryColor;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: $mainTransition;
+
+      &:hover {
+        color: $mainWhite;
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
