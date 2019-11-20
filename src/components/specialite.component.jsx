@@ -16,14 +16,14 @@ const dataImage = graphql`{
 
 const Specialite = () => {
   const image = useStaticQuery(dataImage)
-  console.log(image)
+  // console.log(image)
 
   return (
     <section className="specialite">
       <SectionTitle title="Notre specialité"/>
       <div className="container py-5">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 mb-3 mb-sm-0">
             <Img fluid={image.fluid.childImageSharp.fluid}/>
           </div>
           <div className="col-md-6 d-flex flex-column justify-content-center text-center">

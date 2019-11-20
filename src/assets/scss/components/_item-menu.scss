@@ -1,8 +1,8 @@
-.burger-menu {
+.item-menu {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   
-  .burger-title {
+  .item-title {
     text-transform: uppercase;
     color: $primaryColor;
   }
