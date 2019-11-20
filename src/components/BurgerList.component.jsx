@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
 const dataBurgers = graphql`
 {
@@ -28,15 +29,16 @@ const BurgerList = () => {
     <div className="container py-5">
       <div className="row">
       {burgers.map(burger => {
-        // console.log(burger)
+        const { id, name, ingredients, price } = burger.node
+        const { fixed } = burger.node.image
         return (
-          <div className="col-md-6 mb-2 burger-menu" key={burger.node.id}>
-            <img src={burger.node.image.fixed.src} alt={burger.node.name} className="img-fluid"/>
+          <div className="col-md-6 mb-2 burger-menu" key={id}>
+            <Img fixed={fixed} />
             <div className="px-2">
-              <h3 className="burger-title">{burger.node.name}</h3>
-              <p>{burger.node.ingredients}</p>
+              <h3 className="burger-title">{name}</h3>
+              <p>{ingredients}</p>
             </div>
-            <p>{burger.node.price} €</p>
+            <p>{price} €</p>
           </div>
         )
       })}
