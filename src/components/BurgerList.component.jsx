@@ -33,7 +33,7 @@ const BurgerList = () => {
         const { fixed } = burger.node.image
         return (
           <div className="col-md-6 mb-2 burger-menu" key={id}>
-            <Img fixed={fixed} />
+            <Img fixed={fixed} alt={name}/>
             <div className="px-2">
               <h3 className="burger-title">{name}</h3>
               <p>{ingredients}</p>
